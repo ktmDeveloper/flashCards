@@ -1,0 +1,125 @@
+/*create responsive container*/
+body{
+	background-color: #e3e3e3;
+	margin: 0px;
+	font-family: 'Roboto', sans-serif;
+}
+#standard-deck{
+	width: 1420px;
+	margin: 0px auto;
+	position: relative;
+	/*add overflow hidden to get rid of the flash inbetween cards*/
+	overflow: hidden;
+	min-height: 800px;
+}
+/*showing multiple hovers at once*/
+#standard-deck:hover .card_front{
+	background-color: #fffcf6;
+}
+#info_cont, #deck_cont, #discard_cont{
+  	position:relative;
+}
+#info_div{
+	background-color: #39CCCC;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+#deck_div{
+	  min-width:600px;
+	  width: 80%;
+	  max-width: 1024px;
+	  margin: 0 auto;
+	  display:grid;
+	  grid-template-columns: repeat(auto-fill, 200px);
+	  grid-template-rows:300px;
+	  grid-gap: 10px;
+	  align-content: stretch;
+	  justify-content: center;
+}
+.suit_container {
+    height: 60px;
+    width: 30px;
+    position: absolute;
+    font-size: 1.5em;
+    text-align: center;
+}
+.diamonds .suit_container, 
+.hearts .suit_container{
+	color: red;
+}
+.suit_container:last-child {
+	right:10px;
+	bottom: 10px;
+	-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+.suit_container img{
+    width: 30px;
+    bottom: 0px;
+}
+.card_container{
+	border: thin solid #ccc;
+    background-color: #39CCCC;
+    border-radius: 10px;
+    color: #001F3F;
+    position: relative;
+}
+.card_container .flip{
+	height: 300px;
+}
+.card_front, .card_back {
+	backface-visibility: hidden;
+	cursor: pointer;
+	padding: 20px;
+	text-align: center;
+	line-height: 1.5em;
+}
+
+.card_back {
+	transform: rotateY(180deg);
+	/* background-position: -915px -867px; */
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.back_val a{
+	border: thin solid #ccc;
+    color: white;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+}
+.standard-deck .card_back {
+	background-image: url(./images/stock-vector-playing-cards-spade-suit-highly-detailed-vector-illustration-eps-contains-transparences-97643009.jpg);
+}
+.card_category, .cat_val {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0px;
+    font-size: .8em;
+    letter-spacing: 0.5px;
+}
+.stacked_card{
+	position: absolute;
+}
+button {
+    border-radius: 0px;
+    padding: 5px 10px;
+    background-color: #001F3F;
+	font-size: 1.1em;
+	color:#39CCCC;
+	border: 1px solid black;
+}
+button:hover{
+	cursor: pointer;
+}
+img{
+	width: 40px;
+}

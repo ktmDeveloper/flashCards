@@ -1,0 +1,16 @@
+/* flip card */
+.flip_card .flip{
+    transform: rotateY(180deg);
+    transform-origin:center;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip_card .cat_val{
+    display: none;
+}
+
+.flip_card{
+    color: #39CCCC;
+    background-color: #001F3F;
+}
